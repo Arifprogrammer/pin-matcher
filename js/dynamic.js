@@ -10,6 +10,7 @@ document.getElementById("generate-btn").addEventListener("click", function(){
         false;
     }
 })
+
 //* -----------calculator part----------
 document.getElementById("calculator").addEventListener("click", function(e){
     const value = e.target.innerText;
@@ -45,9 +46,11 @@ document.getElementById("submit-btn").addEventListener("click", function(){
     else{
         if(picInput.value == calInput.value){
             showHide(".notify:nth-child(2)", "block", ".notify:nth-child(1)", "none");
+            calInput.value = "";
         }
         else{
             showHide(".notify:nth-child(1)", "block", ".notify:nth-child(2)", "none");
+            calInput.value = "";
             x += 1;
             if(x <= 3){
                 const three = document.getElementById("three");
